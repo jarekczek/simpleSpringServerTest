@@ -18,7 +18,17 @@ dependencies {
     'org.springframework:spring-context-support:4.3.7.RELEASE',
     'org.springframework:spring-webmvc:4.3.7.RELEASE',
     'javax.servlet:javax.servlet-api:3.1.0',
-    'javax:javaee-api:7.0'
+    'javax:javaee-api:7.0',
+    'org.glassfish.jersey.core:jersey-client:2.0.1'
+  ]
+  def bootEmbeddedDeps = [
+    'org.springframework.boot:spring-boot-test:1.5.3.RELEASE',
+    'org.springframework.boot:spring-boot-autoconfigure:1.5.3.RELEASE',
+    'org.apache.tomcat.embed:tomcat-embed-core:8.5.14',
+    'org.apache.tomcat.embed:tomcat-embed-el:8.5.14',
+    'org.apache.tomcat.embed:tomcat-embed-jasper:8.5.14',
+    'org.glassfish.web:javax.el:2.2.6',
+    'org.hibernate:hibernate-validator:5.4.1.Final'
   ]
   testCompile 'junit:junit:4.12'
   testCompile 'org.springframework:spring-test:4.3.7.RELEASE'
@@ -27,12 +37,15 @@ dependencies {
     compileClasspath serverDeps
   else
     compile serverDeps
+  if (bootEmbedded == 'true')
+    testCompile bootEmbeddedDeps
 }
 
 tasks.withType(Test) {
   outputs.upToDateWhen {false}
   testLogging.showStandardStreams = true
   testLogging.exceptionFormat = 'full'
+  environment['logging.config'] = 'j:/lang/java/_logging/logging.properties'
 }
 
 task glass (type:Exec, dependsOn: 'war') {
