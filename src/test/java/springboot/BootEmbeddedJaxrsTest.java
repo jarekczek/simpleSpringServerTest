@@ -1,26 +1,17 @@
 package springboot;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.Response;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
 import org.springframework.boot.context.embedded.LocalServerPort;
-import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import sspri.SpringConf;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(
@@ -52,7 +43,7 @@ public class BootEmbeddedJaxrsTest {
       .get();
     String respText = resp.readEntity(String.class);
     System.out.println("resp: " + resp);
-    Thread.currentThread().sleep(3);
+    Thread.sleep(3);
     assertEquals(200, resp.getStatus());
     assertTrue(respText.contains("<title>Hello</title>"));
   }
