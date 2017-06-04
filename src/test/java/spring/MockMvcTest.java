@@ -25,7 +25,7 @@ import sspri.SpringConf;
 @RunWith(SpringRunner.class)
 @WebAppConfiguration
 @ContextConfiguration(classes = SpringConf.class)
-public class SprTest {
+public class MockMvcTest {
   @Autowired
   private WebApplicationContext wac;
 
