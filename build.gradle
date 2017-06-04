@@ -1,0 +1,62 @@
+apply plugin: 'war'
+
+apply plugin: 'eclipse'
+eclipse.classpath.downloadJavadoc = true
+eclipse.classpath.downloadSources = false
+tasks.eclipse {
+  doLast {
+    'D:\\Program_Files\\eSpeak\\command_line\\espeak.exe eclipse'.execute()
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  def bigDeps = [
+    'org.springframework:spring-context-support:4.3.7.RELEASE',
+    'org.springframework:spring-webmvc:4.3.7.RELEASE'
+  ]
+  compileClasspath 'javax.servlet:javax.servlet-api:3.1.0'
+  compileClasspath 'javax:javaee-api:7.0'
+  testCompile 'junit:junit:4.12'
+  testCompile 'org.springframework:spring-test:4.3.7.RELEASE'
+  if (smallJar == 'true')
+    compileClasspath bigDeps
+  else
+    compile bigDeps
+}
+
+tasks.withType(Test) {
+  outputs.upToDateWhen {false}
+  testLogging.showStandardStreams = true
+  testLogging.exceptionFormat = 'full'
+}
+
+task glass (type:Exec, dependsOn: 'war') {
+  description = 'deploy at glassfish'
+  commandLine = [
+     'D:\\lang\\java\\j2ee\\glassfish4\\bin\\asadmin.bat',
+    'deploy',
+    '--force=true',
+    '' + buildDir + '\\libs\\' + rootProject.name + '.war'
+  ]
+  doLast {
+    'D:\\Program_Files\\eSpeak\\command_line\\espeak.exe glass'.execute()
+  }
+}
+
+task tomcat (type:Exec, dependsOn: 'war') {
+  description = 'deploy at tomcat'
+  commandLine = [
+    'ant.bat',
+    '-f', 'C:/Program Files (x86)/Apache Group/apache-tomcat-8.5.12-deployer/build.xml',
+    'deploy',
+    '-Dwebapp=' + rootProject.name,
+    '-Dwebapp.path=' + buildDir + '\\libs\\' + rootProject.name
+  ]
+  doLast {
+    'D:\\Program_Files\\eSpeak\\command_line\\espeak.exe tomcat'.execute()
+  }
+}
