@@ -14,18 +14,19 @@ repositories {
 }
 
 dependencies {
-  def bigDeps = [
+  def serverDeps = [
     'org.springframework:spring-context-support:4.3.7.RELEASE',
-    'org.springframework:spring-webmvc:4.3.7.RELEASE'
+    'org.springframework:spring-webmvc:4.3.7.RELEASE',
+    'javax.servlet:javax.servlet-api:3.1.0',
+    'javax:javaee-api:7.0'
   ]
-  compileClasspath 'javax.servlet:javax.servlet-api:3.1.0'
-  compileClasspath 'javax:javaee-api:7.0'
   testCompile 'junit:junit:4.12'
   testCompile 'org.springframework:spring-test:4.3.7.RELEASE'
+  testCompile serverDeps
   if (smallJar == 'true')
-    compileClasspath bigDeps
+    compileClasspath serverDeps
   else
-    compile bigDeps
+    compile serverDeps
 }
 
 tasks.withType(Test) {
