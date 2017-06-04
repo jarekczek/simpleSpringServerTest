@@ -1,12 +1,9 @@
 package springboot;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
-
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.core.Response;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,7 +13,6 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.gargoylesoftware.htmlunit.Page;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
