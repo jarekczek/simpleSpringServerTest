@@ -3,6 +3,8 @@ package sspri;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,14 @@ public class Ctrl {
   public String root()
   {
     return "root";
+  }
+
+  @ResponseBody
+  @RequestMapping("/help")
+  public String root(HttpServletRequest req)
+  {
+    return "<a href='" + req.getContextPath() + "/static_help.html'>"
+      + "here you get help</a>";
   }
 
   @RequestMapping("/view")
