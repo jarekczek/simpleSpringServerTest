@@ -13,12 +13,16 @@ repositories {
   mavenCentral()
 }
 
+if (bootEmbedded != 'true')
+  sourceSets.test.java.exclude "springboot"
+
 dependencies {
   def serverDeps = [
     'org.springframework:spring-context-support:4.3.7.RELEASE',
     'org.springframework:spring-webmvc:4.3.7.RELEASE',
     'javax.servlet:javax.servlet-api:3.1.0',
-    'javax:javaee-api:7.0'
+    'javax:javaee-api:7.0',
+    'com.fasterxml.jackson.module:jackson-modules-base:2.8.9'
   ]
   def bootEmbeddedDeps = [
     'org.springframework.boot:spring-boot-test:1.5.3.RELEASE',
