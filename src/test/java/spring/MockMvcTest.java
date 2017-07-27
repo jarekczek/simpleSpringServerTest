@@ -56,5 +56,12 @@ public class MockMvcTest {
     .andDo(MockMvcResultHandlers.print());
   }
   
+  @Test
+  public void testJey() throws Exception
+  {
+    mockMvc.perform(MockMvcRequestBuilders.get("/jey"))
+    .andDo(MockMvcResultHandlers.print());
+  }
+  
 }
 
