@@ -59,6 +59,15 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
+=======
+	<classpathentry kind="lib" path="C:/Users/Jarek/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.9/4dfca3975be3c1a98eacb829e70f02e9a71bc159/jackson-databind-2.8.9.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jarek/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.9/5cd6dde8dab2566c7a800f017b9c26f802792405/jackson-databind-2.8.9-javadoc.jar!/"/>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+>>>>>>> 13c838
 	<classpathentry kind="lib" path="C:/Users/Jarek/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/1.5.3.RELEASE/ad57d8bacb4fc147ded7c99806f8693855f5fe29/spring-boot-test-1.5.3.RELEASE.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jarek/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/1.5.3.RELEASE/8fec1a4a67a6099cb2f33f01357f3f3b541bb6cb/spring-boot-test-1.5.3.RELEASE-javadoc.jar!/"/>
@@ -127,6 +136,21 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
+=======
+	<classpathentry kind="lib" path="C:/Users/Jarek/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.8.0/45b426f7796b741035581a176744d91090e2e6fb/jackson-annotations-2.8.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jarek/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.8.0/21f8639b30914ae5c31424d0bfc682ac54796c0f/jackson-annotations-2.8.0-javadoc.jar!/"/>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Jarek/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.8.9/569b1752705da98f49aabe2911cc956ff7d8ed9d/jackson-core-2.8.9.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jarek/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.8.9/f692b0889d52a9dae927cfaa5c8f0dc742a1b300/jackson-core-2.8.9-javadoc.jar!/"/>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+>>>>>>> 13c838
 	<classpathentry kind="lib" path="C:/Users/Jarek/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.5.3.RELEASE/5fedde3489afd5dbd82f9122aaec4c9f6da3d564/spring-boot-1.5.3.RELEASE.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jarek/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.5.3.RELEASE/8af95a105de7d6c115a5d0713931bc29afd78895/spring-boot-1.5.3.RELEASE-javadoc.jar!/"/>

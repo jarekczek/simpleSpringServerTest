@@ -2,10 +2,14 @@ package spring;
 
 import static org.junit.Assert.assertNotNull;
 
+import javax.json.Json;
+import javax.json.JsonObject;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -54,6 +58,16 @@ public class MockMvcTest {
     .andExpect(MockMvcResultMatchers.status().is2xxSuccessful())
     .andExpect(MockMvcResultMatchers.view().name("hello"))
     .andDo(MockMvcResultHandlers.print());
+  }
+  
+  @Test
+  public void testJey() throws Exception
+  {
+    String postBody = "{\"q\": \"bear\"}";
+    mockMvc.perform(MockMvcRequestBuilders.post("/jey")
+      .content(postBody)
+      .contentType(MediaType.APPLICATION_JSON))
+      .andDo(MockMvcResultHandlers.print());
   }
   
 }
