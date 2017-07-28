@@ -1,12 +1,10 @@
 #
-<<<<<<< HEAD
-#Sun Jun 04 22:47:40 CEST 2017
-=======
-#Thu Jul 27 21:37:00 CEST 2017
->>>>>>> 13c838
+#Fri Jul 28 08:36:34 CEST 2017
 org.eclipse.jdt.core.compiler.debug.localVariable=generate
+>>>>>>>=13c838
 org.eclipse.jdt.core.compiler.compliance=1.8
 org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve
+<<<<<<<=HEAD
 org.eclipse.jdt.core.compiler.debug.sourceFile=generate
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
 org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
@@ -15,3 +13,4 @@ eclipse.preferences.version=1
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 org.eclipse.jdt.core.compiler.source=1.8
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+=\=\=\=\=\=\=
